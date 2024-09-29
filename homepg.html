@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #e0e0e2; /* Dark background */
+            color: #010000; /* Light text */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1.head {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        /* Button Styles */
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #538d4e; /* Green background for Wordle buttons */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6aaa64; /* Lighter green on hover */
+        }
+
+        .login-button, .subscribe-button {
+            background-color: #3a3a3c; /* Darker button for login and subscribe */
+        }
+
+        .login-button:hover, .subscribe-button:hover {
+            background-color: #4d4d4f; /* Slightly lighter on hover */
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #d3d6da; /* Light gray text */
+        }
+
+        /* Styling for Responsive Design */
+        @media screen and (max-width: 600px) {
+            h1.head {
+                font-size: 2rem;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="wordle-logo">
+            <img src="wordlelogo.jpg" alt="Wordle Logo" class="logo">
+        </div>
+        <h1 class="head">Wordle</h1>
+        <p>Get 6 chances to guess a 5-letter word.</p>
+
+        <div class="buttons">
+            <a href="index.html"><button class="play-button">Play</button></a><br>
+            <a href="login.html"><button class="login-button" >Log in</button></a><br>
+            <!--<button class="subscribe-button">Subscribe</button>-->
+        </div>
+       
+        
+        <br>
+    </div>
+</body>
+</html>

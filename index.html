@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>Wordle-like Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Wordle Game</h1>
+        <nav>
+            <a href="homepg.html">Home</a>
+            <a href="#" id="howToPlayBtn">How to Play</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <div id="word-display">Guess the Word: <span id="word-text"></span></div>
+        <div class="grid">
+            <!-- Create a 6x5 grid -->
+            <div class="row">
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+            </div>
+            <!-- Repeat for 5 more rows -->
+            <div class="row">
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+            </div>
+            <div class="row">
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+            </div>
+            <div class="row">
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+            </div>
+            <div class="row">
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+            </div>
+            <div class="row">
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+                <input type="text" maxlength="1" class="cell" disabled>
+            </div>
+        </div>
+
+        <!-- On-screen keyboard -->
+        <div class="keyboard">
+            <div class="keyboard-row">
+                <button class="key">Q</button>
+                <button class="key">W</button>
+                <button class="key">E</button>
+                <button class="key">R</button>
+                <button class="key">T</button>
+                <button class="key">Y</button>
+                <button class="key">U</button>
+                <button class="key">I</button>
+                <button class="key">O</button>
+                <button class="key">P</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key">A</button>
+                <button class="key">S</button>
+                <button class="key">D</button>
+                <button class="key">F</button>
+                <button class="key">G</button>
+                <button class="key">H</button>
+                <button class="key">J</button>
+                <button class="key">K</button>
+                <button class="key">L</button>
+            </div>
+            <div class="keyboard-row">
+                <button class="key">Z</button>
+                <button class="key">X</button>
+                <button class="key">C</button>
+                <button class="key">V</button>
+                <button class="key">B</button>
+                <button class="key">N</button>
+                <button class="key">M</button>
+                <button class="keyS" id="delete">DEL</button>
+                <button class="keyS" id="enter">ENTER</button>
+            </div>
+        </div>
+    </main>
+    <div id="howToPlayModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>Guess the Wordle in 6 tries.</p>
+            <ul>
+                <li>Each guess must be a valid 5-letter word. Hit the enter button to submit.</li>
+                <li>After each guess, the color of the tiles will change to show how close your guess was to the word.</li>
+            </ul>
+            <h3>Examples</h3>
+            <p><strong>W</strong> E A R Y</p>
+            <p>The letter W is in the word and in the correct spot.</p>
+            <p>P <strong>I</strong> L L S</p>
+            <p>The letter I is in the word but in the wrong spot.</p>
+            <p>V A G U <strong>E</strong></p>
+            <p>The letter E is not in the word in any spot.</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
