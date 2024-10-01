@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, 
+    maximum-scale=1, user-scalable=yes">
     <title>Wordle-like Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,11 +13,19 @@
         <nav>
             <a href="homepg.html">Home</a>
             <a href="#" id="howToPlayBtn">How to Play</a>
-
+            <div class="wavy-overlay"></div>
+            <svg width="0" height="0">
+              <filter id="wavy">
+                <feTurbulence type="turbulence" baseFrequency="0.01 0.01" numOctaves="5" seed="2" result="turbulence"/>
+                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </svg>
         </nav>
+        
     </header>
 
     <main>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
         <div id="word-display">Guess the Word: <span id="word-text"></span></div>
         <div class="grid">
             <!-- Create a 6x5 grid -->
@@ -110,7 +119,8 @@
             <p>Guess the Wordle in 6 tries.</p>
             <ul>
                 <li>Each guess must be a valid 5-letter word. Hit the enter button to submit.</li>
-                <li>After each guess, the color of the tiles will change to show how close your guess was to the word.</li>
+                <li>After each guess, the color of the tiles will change to show how 
+                    close your guess was to the word.</li>
             </ul>
             <h3>Examples</h3>
             <p><strong>W</strong> E A R Y</p>
@@ -121,8 +131,15 @@
             <p>The letter E is not in the word in any spot.</p>
         </div>
     </div>
-
-
-    <script src="script.js"></script>
+    <script src="script.js"></script>   
+<!-- Add this to your HTML file, preferably just before the closing </body> tag -->
+<div id="win-popup" class="popup">
+    <div class="popup-content">
+      <h2>Congratulations!</h2>
+      <p>You guessed the word correctly!</p>
+      <p>The word was: <span id="correct-word"></span></p>
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
 </body>
 </html>
