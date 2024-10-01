@@ -265,10 +265,10 @@ button {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #000000;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #000000;
     width: 80%;
     max-width: 400px;
     text-align: center;
